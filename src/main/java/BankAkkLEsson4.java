@@ -27,10 +27,11 @@ public class BankAkkLEsson4 {
 //        System.out.println(MyAkk.balance);
 //
 //    }
+    //----Car----------------
     BankAkkLEsson4(){}//дефолтный конструктор
 
-    String color = "red";
-    String engine = "V6";
+    String color ;
+    String engine ;
 }
 
 class BankAkkTest {

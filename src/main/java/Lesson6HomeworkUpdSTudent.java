@@ -1,5 +1,19 @@
-public class Lesson5HomeWork {
-    Lesson5HomeWork(int nomerBileta, String Imya, String Familia, int godUchebi, double ocenkaMath, double ocenkaEkonomy,
+public class Lesson6HomeworkUpdSTudent{
+
+    Lesson6HomeworkUpdSTudent(){
+        this(0,null,null,0,0.0,0.0,0.0);
+    }
+
+    Lesson6HomeworkUpdSTudent(int nomerBileta, String Imya, String Familia, int godUchebi){
+        this(nomerBileta,Imya,Familia,godUchebi, 0.0,0.0,0.0);
+        nomerBileta = BiletNum;
+        Imya = FirstName;
+        Familia = LastName;
+        godUchebi = StudyYear;
+    }
+
+
+    Lesson6HomeworkUpdSTudent(int nomerBileta, String Imya, String Familia, int godUchebi, double ocenkaMath, double ocenkaEkonomy,
                     double ocenkaLanguage){
         nomerBileta = BiletNum;
         Imya = FirstName;
@@ -25,9 +39,9 @@ public class Lesson5HomeWork {
     }
 }
 
-class  BankAkkHw {
+class  BankAkkHw6 {
     //1.BankAkk------------------------------------------------------------------------------------
-    BankAkkHw(int CardId, String CarholderName, double CardBalance){
+    BankAkkHw6(int CardId, String CarholderName, double CardBalance){
         CardId = id;
         CarholderName = name;
         CardBalance = balance;
@@ -53,9 +67,9 @@ class  BankAkkHw {
     }
 }
 
-class Employee {
+class Employee6 {
     //employe-----------------------------------------------------------------------------------------
-    Employee (int nomerRabotnika, String Imya, int vozrast, double zarplata, String otdel) {
+    Employee6 (int nomerRabotnika, String Imya, int vozrast, double zarplata, String otdel) {
         nomerRabotnika = Employeeid;
         surname = Imya;
         age = vozrast;
@@ -78,75 +92,56 @@ class Employee {
 
 
 
-//задание 3 к дз 5 лекции --вынес в методы подсчет средней оценки и вывод информации о студентах
-class StudentTest2 {
+//задание 2 к дз 6 лекции --три конструктора и дефолтные значения
+class StudentTest6 {
     public static void main(String[] args) {
-        Lesson5HomeWork StudentMike = new Lesson5HomeWork(13, "Mike", "Bakhtin", 2022,
+        Lesson6HomeworkUpdSTudent StudentMike = new Lesson6HomeworkUpdSTudent(13, "Mike", "Bakhtin", 2022,
                 3, 4, 5);
-//        StudentMike.BiletNum = 13;
-//        StudentMike.FirstName = "Mike";
-//        StudentMike.LastName = "Baktin";
-//        StudentMike.StudyYear = 2022;
-//        StudentMike.AverageGradeMath = 3;
-//        StudentMike.AverageGradeEkonmy = 4;
-//        StudentMike.AverageGradeLanguage = 5;
         StudentMike.getFinalAverageGrade(StudentMike.BiletNum, StudentMike.FirstName, StudentMike.LastName,
                 StudentMike.StudyYear, StudentMike.AverageGradeMath, StudentMike.AverageGradeEkonmy, StudentMike.AverageGradeLanguage);
 
 
-        Lesson5HomeWork StudentVera = new Lesson5HomeWork(21, "Vera", "Bakhtina", 2022,
+        Lesson6HomeworkUpdSTudent StudentVera = new Lesson6HomeworkUpdSTudent(21, "Vera", "Bakhtina", 2022,
                 4, 4, 5);
-//        StudentVera.BiletNum = 21;
-//        StudentVera.FirstName = "Vera";
-//        StudentVera.LastName = "Baktina";
-//        StudentVera.StudyYear = 2022;
-//        StudentVera.AverageGradeMath = 4;
-//        StudentVera.AverageGradeEkonmy = 4;
-//        StudentVera.AverageGradeLanguage = 5;
         StudentVera.getFinalAverageGrade(StudentVera.BiletNum, StudentVera.FirstName, StudentMike.LastName,
                 StudentVera.StudyYear, StudentVera.AverageGradeMath, StudentVera.AverageGradeEkonmy, StudentVera.AverageGradeLanguage);
 
 
-        Lesson5HomeWork StudentKnopa = new Lesson5HomeWork(10, "Knopa", "Bakhtina", 2022,
+        Lesson6HomeworkUpdSTudent StudentKnopa = new Lesson6HomeworkUpdSTudent(10, "Knopa", "Bakhtina", 2022,
                 3, 3, 4);
-//        StudentKnopa.BiletNum = 10;
-//        StudentKnopa.FirstName = "Knopa";
-//        StudentKnopa.LastName = "Baktina";
-//        StudentKnopa.StudyYear = 2022;
-//        StudentKnopa.AverageGradeMath = 3;
-//        StudentKnopa.AverageGradeEkonmy = 3;
-//        StudentKnopa.AverageGradeLanguage = 4;
         StudentKnopa.getFinalAverageGrade(StudentKnopa.BiletNum, StudentKnopa.FirstName, StudentKnopa.LastName,
                 StudentKnopa.StudyYear, StudentKnopa.AverageGradeMath, StudentKnopa.AverageGradeEkonmy, StudentKnopa.AverageGradeLanguage);
+        //lesson6HW -- 2.
+        Lesson6HomeworkUpdSTudent noneStudent = new Lesson6HomeworkUpdSTudent();
+        noneStudent.getFinalAverageGrade(noneStudent.BiletNum, noneStudent.FirstName, noneStudent.LastName,
+                noneStudent.StudyYear, noneStudent.AverageGradeMath, noneStudent.AverageGradeEkonmy, noneStudent.AverageGradeLanguage);
+
+        Lesson6HomeworkUpdSTudent abiturient = new Lesson6HomeworkUpdSTudent(128,"Vasya","Pupkin",2010);
+        abiturient.getFinalAverageGrade(abiturient.BiletNum, abiturient.FirstName, abiturient.LastName,
+                abiturient.StudyYear, abiturient.AverageGradeMath, abiturient.AverageGradeEkonmy, abiturient.AverageGradeLanguage);
+
+        Lesson6HomeworkUpdSTudent newStudent = new Lesson6HomeworkUpdSTudent(228,"Kon","r=vYablokah", 2009,5,3,3);
+        newStudent.getFinalAverageGrade(newStudent.BiletNum, newStudent.FirstName, newStudent.LastName,
+                newStudent.StudyYear, newStudent.AverageGradeMath, newStudent.AverageGradeEkonmy, newStudent.AverageGradeLanguage);
+
 
         //BankAkk---------------------------------------------------------------------------------------------------------------------------
-        BankAkkHw MikeBankAKk = new BankAkkHw(13, "Mike", 13.383);
-//        MikeBankAKk.id = 13;
-//        MikeBankAKk.name = "Mike";
-//        MikeBankAKk.balance = 13.383;
+        BankAkkHw6 MikeBankAKk = new BankAkkHw6(13, "Mike", 13.383);
         MikeBankAKk.popolnitBalance(200);
         System.out.println("a teper ktoto snal va6i dengi-------------");
         MikeBankAKk.umenshitBalance(150);
 
         //Employee--------------------------------------------------------
-        Employee rabotnikMike = new Employee(13, "PiuPiu", 37, 100.000, "Ledokoli");
-//        rabotnikMike.Employeeid = 13;
-//        rabotnikMike.surname = "PiuPiu";
-//        rabotnikMike.age = 37;
-//        rabotnikMike.salary = 100.000;
-//        rabotnikMike.department = "Ledokoli";
+        Employee6 rabotnikMike = new Employee6(13, "PiuPiu", 37, 100.000, "Ledokoli");
         rabotnikMike.novayaZarplata(2);
 
-        Employee rabotnikVera = new Employee(21, "ViuViu", 35, 75.000, "Tinkoff");
+        Employee6 rabotnikVera = new Employee6(21, "ViuViu", 35, 75.000, "Tinkoff");
         rabotnikVera.Employeeid = 21;
-//        rabotnikVera.surname = "ViuViu";
-//        rabotnikVera.age = 35;
-//        rabotnikVera.salary = 75.000;
-//        rabotnikVera.department = "Tinkoff";
         rabotnikVera.novayaZarplata(2);
 
     }
 }
+
 
 
 

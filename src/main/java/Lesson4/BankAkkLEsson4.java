@@ -1,3 +1,5 @@
+package Lesson4;
+
 public class BankAkkLEsson4 {
     int id;
     String name = "Mike";
@@ -6,9 +8,9 @@ public class BankAkkLEsson4 {
 
 
 //    public static void main(String[] args) {
-//        BankAkkLEsson4 MyAkk = new BankAkkLEsson4();
-//        BankAkkLEsson4 YourAkk = new BankAkkLEsson4();
-//        BankAkkLEsson4 HerAkk = new BankAkkLEsson4();
+//        Lesson4.BankAkkLEsson4 MyAkk = new Lesson4.BankAkkLEsson4();
+//        Lesson4.BankAkkLEsson4 YourAkk = new Lesson4.BankAkkLEsson4();
+//        Lesson4.BankAkkLEsson4 HerAkk = new Lesson4.BankAkkLEsson4();
 //
 //        MyAkk.id = 1;
 //        MyAkk.name = "Mike";

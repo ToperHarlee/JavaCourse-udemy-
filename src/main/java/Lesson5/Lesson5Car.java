@@ -1,3 +1,5 @@
+package Lesson5;
+
 public class Lesson5Car {
 
     Lesson5Car(String cvet, String motor) {

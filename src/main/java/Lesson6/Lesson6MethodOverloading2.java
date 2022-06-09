@@ -1,3 +1,5 @@
+package Lesson6;
+
 public class Lesson6MethodOverloading2 {
     //Return type может быть одинаковый или различный
     //acces modiferied могуть быть одинаковые или различные

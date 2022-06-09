@@ -1,3 +1,5 @@
+package Homework;
+
 public class Lesson6HomeworkUpdSTudent{
 
     Lesson6HomeworkUpdSTudent(){
@@ -131,7 +133,7 @@ class StudentTest6 {
         System.out.println("a teper ktoto snal va6i dengi-------------");
         MikeBankAKk.umenshitBalance(150);
 
-        //Employee--------------------------------------------------------
+        //Homework.Employee--------------------------------------------------------
         Employee6 rabotnikMike = new Employee6(13, "PiuPiu", 37, 100.000, "Ledokoli");
         rabotnikMike.novayaZarplata(2);
 

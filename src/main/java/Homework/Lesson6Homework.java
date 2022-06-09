@@ -1,3 +1,5 @@
+package Homework;
+
 public class Lesson6Homework {
 //Lesson6 HW --1
     Lesson6Homework() {

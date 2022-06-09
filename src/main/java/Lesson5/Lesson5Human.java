@@ -1,3 +1,5 @@
+package Lesson5;
+
 public class Lesson5Human {
    String name;
    Car3 car;

@@ -1,3 +1,5 @@
+package Homework;
+
 public class Lesson5HomeWork {
     Lesson5HomeWork(int nomerBileta, String Imya, String Familia, int godUchebi, double ocenkaMath, double ocenkaEkonomy,
                     double ocenkaLanguage){
@@ -128,7 +130,7 @@ class StudentTest2 {
         System.out.println("a teper ktoto snal va6i dengi-------------");
         MikeBankAKk.umenshitBalance(150);
 
-        //Employee--------------------------------------------------------
+        //Homework.Employee--------------------------------------------------------
         Employee rabotnikMike = new Employee(13, "PiuPiu", 37, 100.000, "Ledokoli");
 //        rabotnikMike.Employeeid = 13;
 //        rabotnikMike.surname = "PiuPiu";

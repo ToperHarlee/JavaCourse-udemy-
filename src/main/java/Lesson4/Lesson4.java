@@ -1,3 +1,5 @@
+package Lesson4;
+
 public class Lesson4 {
 
     int t = 20;

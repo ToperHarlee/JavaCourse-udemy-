@@ -1,20 +1,22 @@
+package Lesson6;
+
 public class Lesson6Employee {
 //overloaded constructors
-    Lesson6Employee(int id2, String surname2, int age2) {
+   public Lesson6Employee(int id2, String surname2, int age2) {
         //this вызов конструктора внутри конструктора, а какой компилятор определяет по параметрам
 //        this(surname2, age2);
 //        Employeeid = id2;
         this(id2, surname2, age2, 0.0, null);
     }
 
-    Lesson6Employee (String surname3, int age3) {
+   public Lesson6Employee (String surname3, int age3) {
 //        surname = surname3;
 //        age  = age3;
         this (0, surname3, age3, 0.0, null);
 
     }
 
-    Lesson6Employee(int id4, String surname4, int age4,double salary4, String department4) {
+   public Lesson6Employee(int id4, String surname4, int age4,double salary4, String department4) {
         //this должен идти первым внутри конструктора
 //        this(id4,surname4, age4);
 //        salary = salary4;

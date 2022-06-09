@@ -1,3 +1,5 @@
+package Lesson6;
+
 public class Lesson6MethodOverloading {
    //метод overloading
    void show(int i1) {

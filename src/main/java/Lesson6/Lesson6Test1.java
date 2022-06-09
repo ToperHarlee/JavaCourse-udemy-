@@ -1,3 +1,5 @@
+package Lesson6;
+
 public class Lesson6Test1 {
     int sum (int a, int b, int c){
         return a + b + c;

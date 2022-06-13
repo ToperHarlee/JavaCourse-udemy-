@@ -4,8 +4,8 @@ import Lesson6.Lesson6Employee;
 
 public class Lesson7HomeWork {
     //дефолтный конструктор(дефолтный если нет модификатора)
-    Lesson7HomeWork() {
-        this(0,"ooo",0,0,"oooo");
+    Lesson7HomeWork(String surnameDefault) {
+        surname = surnameDefault;
     }
 
     Lesson7HomeWork(int id2, String surname2, int age2) {
@@ -35,18 +35,32 @@ public class Lesson7HomeWork {
     }
 
     public void showEmployersParams(int arg1){
-        arg1 = Employeeid;
+        Employeeid = arg1;
         System.out.println("va6 id  " + arg1);
     }
 
-    public void showEmployersParams( String arg2){
-        arg2 = surname;
+    public void showEmployersParams(String arg2){
+        surname = arg2;
         System.out.println("va6 surname  " + arg2);
     }
 
     public void showEmployersParams(double arg3){
-        arg3 = salary;
+        salary = arg3;
         System.out.println("va6a salary  " + arg3);
+    }
+
+    //как узнать значение переменной если она private -- обратится к ней через get
+
+    public void getId (){
+        System.out.println(Employeeid);
+    }
+
+    public void getSurname(){
+        System.out.println(surname);
+    }
+
+    public void getSalary () {
+        System.out.println(salary);
     }
 
 
@@ -55,6 +69,8 @@ public class Lesson7HomeWork {
     int age;
     private double salary;//будет виден только в этом классе
     String department;
+
+
 }
 
 
@@ -65,18 +81,23 @@ class EmployeeTest7{
         System.out.println(emp1.surname);
 //        Lesson7HomeWork emp2 = new Lesson7HomeWork("Bakhtin", 35);//будет ошибка тк приват
         Lesson7HomeWork emp3 = new Lesson7HomeWork(2, "Bakhtin", 35, 100.000, "it");
-        Lesson7HomeWork emp4 = new Lesson7HomeWork();
+        Lesson7HomeWork emp4 = new Lesson7HomeWork("GGGGG");
         System.out.println(emp3.department);
     }
 }
 
 class EmployeeTest8{
     public static void main(String[] args) {
-        Lesson7HomeWork emp5 = new Lesson7HomeWork();
+        Lesson7HomeWork emp5 = new Lesson7HomeWork("gggg");
         System.out.println(emp5);
 //        Lesson7HomeWork emp6 = new Lesson7HomeWork("Bakhtin", 95);
 //        System.out.println(emp6);//не напечатает тк private
+          emp5.showEmployersParams(emp5.Employeeid);
+          emp5.showEmployersParams(emp5.surname);
+//          emp5.showEmployersParams(emp5.salary); не видна эта переменна тк стоит приват
+        //но обратившись через гет можно ее вытащить
+        emp5.getSalary();
+        emp5.getId();
+        emp5.getSurname();
     }
-
-
 }

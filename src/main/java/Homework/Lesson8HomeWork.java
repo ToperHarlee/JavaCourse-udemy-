@@ -18,7 +18,7 @@ public class Lesson8HomeWork {
     }
 
    //2.
-     static final double Pi = 3.14;
+     public static final double Pi = 3.14;
 
      public void PloshadKruga (double radius){
          double S = Pi * radius * radius;
@@ -30,8 +30,8 @@ public class Lesson8HomeWork {
          System.out.println("dlinna okruznosti = " + S);
          return S;
      }
-
-     public void showParams (double radius) {
+ //v static metode nelza ispolz nonstatic metod
+     public  void showParams (double radius) {
          System.out.println("kurrent radius = " + radius);
          DlinnaOkr(radius);
          PloshadKruga(radius);
@@ -50,8 +50,11 @@ class DoWork {
 
         umnozenie(2,2,2);
         umnozenie(3,3,3);
+        //1.1
+        Lesson8HomeWork.umnozenie(2,3,4);//вызов через обращение к классу
+        Lesson8HomeWork.delenie(15,4);
 
-        //2
+        //2 - вызов методов класса в другом через создание методов в другом классе
         radius(5);
         radius(6);
 
@@ -60,6 +63,12 @@ class DoWork {
 
         showParams(5);
         showParams(10);
+
+        //2.2 - вызов методов через создание обьекта и обращение к его методам.
+        Lesson8HomeWork p = new Lesson8HomeWork();
+        p.PloshadKruga(3.6);
+        Lesson8HomeWork.DlinnaOkr(4.5);//к статик методу обращаемся по имени класса где он есть
+        p.showParams(4);
     }
    //HW 1.определил статический метод в другом классе и через него вызвал метод из LEsson8HomeWork
     private static void delenie(double arg1, double arg2) {

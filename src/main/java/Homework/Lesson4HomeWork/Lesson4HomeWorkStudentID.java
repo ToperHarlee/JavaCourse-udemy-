@@ -1,4 +1,4 @@
-package Homework;
+package Homework.Lesson4HomeWork;
 
 public class Lesson4HomeWorkStudentID {
     int BiletNum;

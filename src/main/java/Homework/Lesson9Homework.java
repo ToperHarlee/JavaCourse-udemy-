@@ -7,6 +7,11 @@ public class Lesson9Homework {
         //метод создаем 2 обьекта только внутри себя после вызова они исезнут
         Lesson9Homework p = new Lesson9Homework();
         Lesson9Homework v = new Lesson9Homework();
+        Lesson9Homework op = new Lesson9Homework();
+        Lesson9Homework hy = new Lesson9Homework();
+        Lesson9Homework lo = new Lesson9Homework();
+        Lesson9Homework vf = new Lesson9Homework();
+        //6обьектов
         System.out.println("create 2 obj");
     }
 
@@ -26,14 +31,9 @@ public class Lesson9Homework {
         method1 = null; method2 = null; method3 = null; method4 = null; method5 = null; method6 = null;//осталось 2 обьекта
         System.gc();
         //1.2
-        Lesson9Homework i = new Lesson9Homework();
         createObject();//обьекты тут будут созданы и после вызова исчезнут тк они только в методе
-        createObject();
+        Lesson9Homework i = new Lesson9Homework();
         Lesson9Homework k = new Lesson9Homework();
-        createObject();
-        System.gc();
-
-
     }
 }
 //2.

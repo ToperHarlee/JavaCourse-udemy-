@@ -10,20 +10,20 @@ public class Lesson9Car {
 
 
     String color;//instance переменные и внутри класса и внутри методов
-    int a = 10;
+    public static int ab = 10;
     String engine;
-    static int count;//статик переменная принадлежит всему классу
+    static public int count;//статик переменная принадлежит всему классу
 
     public static void changeA (int b){
         Lesson9Car c = new Lesson9Car("black", "V8");
-        c.a = b;//изменение переменной обьекта как обращение к методу обьекта и присвоение к аргументу другого метода
+        c.ab = b;//изменение переменной обьекта как обращение к методу обьекта и присвоение к аргументу другого метода
         //а будет изменятся только в этом методе для обьекта с
     }
 
 
     //this  указывает на текущий обьект класса
     //this НЕЛЬЗЯ использовать внутри static метода!!!!!!
-    Lesson9Car (String color, String engine) {
+    public  Lesson9Car (String color, String engine) {
 
         int a = 5;
         int y = a + 10;

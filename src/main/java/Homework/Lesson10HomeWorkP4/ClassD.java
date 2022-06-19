@@ -25,8 +25,8 @@ public class ClassD {
 
         System.out.println(r);
         showClassA();
-        s4italka();
-        showMust("go","on");
+        s4italka();//b
+        showMust("go","on");//b
         summFromClassC(5,7);
         showClassE();
 

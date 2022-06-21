@@ -1,6 +1,7 @@
 package Lesson11;
 //аргументы методов
-
+//passing primitives to method - значение данных
+//psssing references to method - копии обьектов
 public class Lesson11 {
     //primitive data types
 

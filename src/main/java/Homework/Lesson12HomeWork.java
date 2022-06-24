@@ -7,6 +7,8 @@ import  static Lesson11.Lesson11.*;
 public class Lesson12HomeWork {
 
        //1
+       //ЗАПОМНИ!!! В МЕТОД ПЕРЕДАЕМ ЗНАЧЕНИЯ(!!!) ОБЬЕКТА т.е. Student st2 --> st2 обьект и к нему мы уже можем повесить
+       // значения(name, course etc)
        public static void checkNameSTuds(Student st1, Student st2) {
            if (st1.name.equals(st2.name)) {
                System.out.println("Имена студентов " + st1.name + st2.name + " совпадают");

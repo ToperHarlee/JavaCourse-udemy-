@@ -3,7 +3,7 @@ package Homework;
 public class Lesson13HomeWork {
     public int month;
 
-    public void setMonth (int bindMonth) {
+    public static void setMonth (int bindMonth) {
         System.out.println("Calendar for 2015 year");
         System.out.println("----------------------");
         switch (bindMonth) {
@@ -19,6 +19,7 @@ public class Lesson13HomeWork {
             case 10 : System.out.println("October 10, days -- 31"); break;
             case 11 : System.out.println("November 11, days -- 30"); break;
             case 12 : System.out.println("December 12, days -- 31"); break;
+            default: System.out.println("Вводите числа от 1 до 12");
         }
     }
 
@@ -26,6 +27,7 @@ public class Lesson13HomeWork {
 
 class Test13 {
     public static void main(String[] args) {
+        Lesson13HomeWork.setMonth(4);
         Lesson13HomeWork p = new Lesson13HomeWork();
         p.setMonth(3);
     }

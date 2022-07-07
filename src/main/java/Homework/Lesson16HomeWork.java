@@ -4,7 +4,6 @@ public class Lesson16HomeWork {
 
     public void  email (String userMail) {
         String um = userMail;
-
         char res;
 
         for (int i = 0; i < um.length(); i++){
@@ -12,6 +11,8 @@ public class Lesson16HomeWork {
             if (res == '@') {
                 System.out.println("Почта юзера :" + userMail.substring(userMail.indexOf("@")
                         + 1, userMail.indexOf(".")));
+            } else if (userMail.contains(";")) {
+                break;
             }
         }
 
@@ -23,14 +24,13 @@ public class Lesson16HomeWork {
         int b = 0;//.
         int i = 0;//; -- относительно нее пересчитывать строку
 
-        while ( i < s.length() - 1){
+        while ( i < s.length() ){
             a = s.indexOf('@', i);
             b = s.indexOf('.',i);
             System.out.println(s.substring(a + 1, b));
             if (s.contains(";")) {
                 break;
-            }
-
+            } else {break;}
         }
     }
 
@@ -42,6 +42,7 @@ public class Lesson16HomeWork {
           p.email("ona@gmail.com");
           System.out.println("-----------------------");
           p.anotherMail("ya@yahoo.com;");
+          p.anotherMail("ona@gmail.com");
     }
 
 

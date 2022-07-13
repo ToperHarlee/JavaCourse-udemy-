@@ -11,6 +11,7 @@ public class Fibonachi {
     public void fibonachiFill (){
         //вводим число с клавы биндим его в переменную
         Scanner scaner = new Scanner(System.in);
+        System.out.println("Введите число: ");
         int n = scaner.nextInt();
 
         int [] f = new int[n];
@@ -26,8 +27,23 @@ public class Fibonachi {
         }
     }
 
+    public static int recursiveFibonachi (int num) {
+        int res;
+        if (num == 1 || num == 2) {
+            return  1;
+        } else {
+            res = recursiveFibonachi(num - 1) + recursiveFibonachi(num - 2);
+        }
+        return res;
+    }
+
     public static void main(String[] args) {
         Fibonachi f = new Fibonachi();
         f.fibonachiFill();
+        System.out.println("---------------------");
+        Scanner scaner = new Scanner(System.in);
+        System.out.println("Введите число: ");
+        int n = scaner.nextInt();
+        System.out.println(recursiveFibonachi(n));
     }
 }

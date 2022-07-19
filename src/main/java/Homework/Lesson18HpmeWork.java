@@ -1,5 +1,6 @@
 package Homework;
 
+import java.lang.module.FindException;
 import java.util.Arrays;
 
 public class Lesson18HpmeWork {
@@ -42,11 +43,45 @@ public class Lesson18HpmeWork {
     }
 
     public static void showArray3 (String [] [] arr) {
+        System.out.print("{");
         for (int i = 0; i < arr.length; i++) {
+            System.out.print("{");
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " , ");
+                if (j == arr[i].length - 1){
+                    System.out.print(arr[i][j]);
+                } else {
+                    System.out.print(arr[i][j] + " , ");
+                }
+            }
+            if (i == arr.length - 1){
+                System.out.print("}");
+            } else {
+                System.out.print("},");
             }
         }
+        System.out.print("}");
+    }
+
+    public static void showArray4 (String [] [] arr) {
+        System.out.print("{");
+        int count = 0;
+        int index = 0;
+        for (String [] array: arr) {
+            count++;
+            System.out.print("{");
+            for (String i: array) {
+                index++;
+                if (index == array.length){
+                    System.out.print(i);
+                } else {System.out.print(i + ",");}
+            }
+            if (count == array.length){
+                System.out.print("}");
+            } else {
+                System.out.print("},");
+            }
+        }
+        System.out.print("}");
     }
 }
 
@@ -63,5 +98,6 @@ class TestHW {
         res.showArray2(array2);
         System.out.println();
         res.showArray3(array2);
+        res.showArray4(array2);
     }
 }

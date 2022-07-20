@@ -34,6 +34,32 @@ public class Lesson19HomeWork {
         }
         return strArr;
     }
+
+
+    public static void defg (String[] ...strings) {
+        int count = 0;
+//        String[] [] strArr = new String[strings.length][strings.length];
+//        for (int i = 0; i < strings.length; i++) {
+//            for (int j = 0; j < strings[j].length; j++) {
+//                count++;
+//                strArr[i] [j] = strings[i] [j];//приравниваем вводимый массив в создаваемый
+//            }
+//        }
+
+        for (String[] arr1: strings) {
+            count = count + arr1.length;
+        }
+        String [] strArr = new String[count];
+        int index = 0;
+//        System.out.println(Arrays.deepToString(strArr));
+        for (String[] s1: strings) {
+            for (String s2: s1) {
+                strArr[index] = s2;
+                index++;
+                System.out.print(s2 + " ");
+            }
+        }
+    }
 }
 
 class Test19 {
@@ -41,9 +67,12 @@ class Test19 {
         Lesson19HomeWork res = new Lesson19HomeWork();
         String[] s1 = new String[]{"asdasda", "asdasdad", "asdasdsssss", " sadasdfsdfgg"};
         String[] s2 = new String[]{"asdasda", "asdasdad", "asdasdsssss"};
+        String[] s3 = new String[]{"Test3"};
+        String[] s4 = new String[]{"Test4"};
         res.abc(s1, s2);
+        res.defg(s1, s4);
 
-        check(args, s1, s2);
+        //check(args, s1, s2);
     }
 
     private static void check(String[] args, String [] ...sss) {

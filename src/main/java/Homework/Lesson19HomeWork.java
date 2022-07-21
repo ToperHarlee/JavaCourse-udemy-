@@ -1,5 +1,6 @@
 package Homework;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 /*
@@ -13,6 +14,22 @@ import java.util.List;
     Запустите приложение с командной строки.
  */
 public class Lesson19HomeWork {
+
+    public static void makeNArr(String[] ...strings){
+        int index = 0;
+        int ArrLenght = 0;
+        for (String[] v: strings) {
+            ArrLenght = ArrLenght + strings[index].length;//задал длинну массива
+        }
+        String[] array = new String[ArrLenght];
+        for (String[] s: strings) {
+            for (String s1: s) {
+                array[index++] = s1;
+                System.out.print(s1 + "");
+            }
+        }
+
+    }
     public static String[] abc (String [] ...strings) {
         int lenghtArr = 0;//сделать как длинну массива
         int index = 0;
@@ -69,19 +86,21 @@ class Test19 {
         String[] s2 = new String[]{"asdasda", "asdasdad", "asdasdsssss"};
         String[] s3 = new String[]{"Test3"};
         String[] s4 = new String[]{"Test4"};
-        res.abc(s1, s2);
-        res.defg(s1, s4);
-
-        //check(args, s1, s2);
+        //res.abc(s1, s2);
+        //res.defg(s1, s4);
+        res.makeNArr(s1,s2);
+        check(args, s1, s2);//проверка на совпадение command line и введенных данных в методе
     }
 
     private static void check(String[] args, String [] ...sss) {
         for (String s : args) {
             for (int i = 0; i < sss.length; i++) {
-                if (s.equals(sss[i])) {
-                    Arrays.fill(sss, null);
-                } else {
-                    System.out.println("NullPointerExeption");
+                for (int j = 0; j < sss[i].length; j++){
+                    if (s.equals(sss[i][j])) {
+                        sss[i][j] = null;
+                    } else {
+                        System.out.println("NullPointerExeption");
+                    }
                 }
             }
         }

@@ -1,4 +1,4 @@
-package Homework;
+package Homework.SideTasks;
 
 public class OneZeroFill {
 

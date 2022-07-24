@@ -1,4 +1,4 @@
-package Homework;
+package Homework.SideTasks;
 
 import java.util.Scanner;
 

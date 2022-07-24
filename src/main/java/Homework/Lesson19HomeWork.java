@@ -14,7 +14,7 @@ import java.util.List;
     Запустите приложение с командной строки.
  */
 public class Lesson19HomeWork {
-
+    //1
     public static void makeNArr(String[] ...strings){
         int index = 0;
         int ArrLenght = 0;
@@ -30,6 +30,7 @@ public class Lesson19HomeWork {
         }
 
     }
+    //1.1
     public static String[] abc (String [] ...strings) {
         int lenghtArr = 0;//сделать как длинну массива
         int index = 0;
@@ -52,7 +53,7 @@ public class Lesson19HomeWork {
         return strArr;
     }
 
-
+    //1.2
     public static void defg (String[] ...strings) {
         int count = 0;
 //        String[] [] strArr = new String[strings.length][strings.length];

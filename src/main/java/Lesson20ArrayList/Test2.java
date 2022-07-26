@@ -32,5 +32,6 @@ public class Test2 {
         for (String s: list){
             System.out.println(s + " ");
         }
+        list2.set(1,"Ivanov");
     }
 }

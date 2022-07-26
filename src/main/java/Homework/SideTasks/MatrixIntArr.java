@@ -88,16 +88,16 @@ public class MatrixIntArr {
 
         //-------------------------------------------------
         //формирование и вывод матрицы
+//        final int n = 6;
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j < n; j++) {
+//                System.out.print(1 + (j + i) % n);
+//                System.out.print('\t');
+//            }
+//            System.out.println();
+//        }
+
         final int n = 6;
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                System.out.print(1 + (j + i) % n);
-                System.out.print('\t');
-            }
-            System.out.println();
-        }
-
-
         int[][] a = new int[n][];
         for (int i = 0; i < n; i++) {
             a[i] = i == 0
@@ -115,30 +115,30 @@ public class MatrixIntArr {
 
         //-----------------------------------------------------------
 
-        int[][] array = {{1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6},
-                {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}};
-        System.out.println("До:");
-        IntStream.range(0, array.length)
-                .forEach(i -> {IntStream.range(0, array[i].length)
-                        .forEach(j -> System.out.printf("%5d", array[i][j]));
-                    System.out.println("");});
-        shiftLeft(array);
-        System.out.println("После:");
-        IntStream.range(0, array.length)
-                .forEach(i -> {IntStream.range(0, array[i].length)
-                        .forEach(j -> System.out.printf("%5d", array[i][j]));
-                    System.out.println("");});
-
-    }
-
-    private static void shiftLeft(int[][] arr) {
-        int len = arr[0].length;
-        int[] col = new int[arr.length];
-        for (int j = 0; j < arr.length; j++) {
-            col[j] = arr[j][0];
-            System.arraycopy(arr[j], 1, arr[j], 0, len - 1);
-            arr[j][len - 1] = col[j];
-        }
+//        int[][] array = {{1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6},
+//                {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}, {1, 2, 3, 4, 5, 6}};
+//        System.out.println("До:");
+//        IntStream.range(0, array.length)
+//                .forEach(i -> {IntStream.range(0, array[i].length)
+//                        .forEach(j -> System.out.printf("%5d", array[i][j]));
+//                    System.out.println("");});
+//        shiftLeft(array);
+//        System.out.println("После:");
+//        IntStream.range(0, array.length)
+//                .forEach(i -> {IntStream.range(0, array[i].length)
+//                        .forEach(j -> System.out.printf("%5d", array[i][j]));
+//                    System.out.println("");});
+//
+//    }
+//
+//    private static void shiftLeft(int[][] arr) {
+//        int len = arr[0].length;
+//        int[] col = new int[arr.length];
+//        for (int j = 0; j < arr.length; j++) {
+//            col[j] = arr[j][0];
+//            System.arraycopy(arr[j], 1, arr[j], 0, len - 1);
+//            arr[j][len - 1] = col[j];
+//        }
     }
 }
 

@@ -2,12 +2,12 @@ package Lesson20ArrayList;
 import java.util.ArrayList;
 public class Test2 {
     public static void main(String[] args) {
-        ArrayList<String> list = new ArrayList<>();
-        list.add("poka");
-        list.add("privet");
-        list.add("ok");
-        list.add(1,"hello");//добавляет элементы начиная с индекса или просто добавляет
-        for (String s: list){
+        ArrayList<StringBuilder> list = new ArrayList<>();
+        list.add(new StringBuilder("poka"));
+        list.add(new StringBuilder("privet"));
+        list.add(new StringBuilder("ok"));
+        list.add(1,new StringBuilder("hello"));//добавляет элементы начиная с индекса или просто добавляет
+        for (StringBuilder s: list){
             System.out.println(s + " ");
         }
 
@@ -25,13 +25,26 @@ public class Test2 {
         //list.remove("poka");
 
         //addAll
-        ArrayList<String> list2 = new ArrayList<>();
-        list2.add("Petrov");
-        list2.add("sidorov");
+        ArrayList<StringBuilder> list2 = new ArrayList<>();
+        list2.add( new StringBuilder("Petrov"));
+        list2.add(new StringBuilder("sidorov"));
         list.addAll(1,list2);
-        for (String s: list){
+        for (StringBuilder s: list){
             System.out.println(s + " ");
         }
-        list2.set(1,"Ivanov");
+        //set
+        //list2.set(1,new StringBuilder("Ivanov"));
+        //get
+        list2.get(1).append("i");
+        for (StringBuilder s: list){
+            System.out.println(s + " ");
+        }
+        //clear
+//        list.clear();
+//        for (StringBuilder s: list){
+//            System.out.println(s + " ");
+//        }
+        //indexOf
+
     }
 }

@@ -8,11 +8,15 @@ import java.util.Scanner;
 public class ScanerList {
     //написал метод, чтобы добавлять значения в массив String
     public static void scanerToList (String s) {
-        String[] str = new String[]{};
+        String[] str = s.split(" , ");
         List<String> list = new ArrayList<>(Arrays.asList(str));
         list.add(s);
-        for (String x: list) {
-            System.out.println(x + "");
+//        for (String x: list) {
+//            System.out.println(x + "");
+//        }
+        //System.out.println(list.toString());
+        for (String y: str) {
+            System.out.println(y + " ");
         }
     }
 

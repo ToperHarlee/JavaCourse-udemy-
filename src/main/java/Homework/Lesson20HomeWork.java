@@ -1,9 +1,24 @@
 package Homework;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Lesson20HomeWork {
 /*Set – это коллекция уникальных элементов, или коллекция, которая не позволяет хранить одинаковые элементы.*/
+
+    public static ArrayList<String> abc2 (String ...s) {
+        ArrayList<String> list = new ArrayList<>();
+        Set<String> lookDubles = new HashSet<>();//отслеживаю повторяющиеся элементы
+        for (String x: s) {
+            if (!lookDubles.add(x) && list.contains(x)){
+                //если не получилось добавить, то значит дубль в списке
+            }else { list.add(x);} // в другом случае добавляем в список
+        }
+        Collections.sort(list);
+        System.out.println(list.toString());
+        return list;
+    }
+
     public static ArrayList<String> abc (String ...s) {
        ArrayList<String> list = new ArrayList<>();
         for (String  x: s) { // ...s это массив и перебирать нужно его добавляя значения в лист
@@ -14,7 +29,6 @@ public class Lesson20HomeWork {
         System.out.println(list.toString());
         return list;
     }
-
 
 
 
@@ -31,6 +45,6 @@ public class Lesson20HomeWork {
 
 
     public static void main(String[] args) {
-        abc("b", "c", "d", "a", "a", "d");
+        abc2("b", "c", "d", "a", "a", "d");
     }
 }

@@ -2,6 +2,7 @@ package Homework;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Lesson20HomeWork {
 /*Set – это коллекция уникальных элементов, или коллекция, которая не позволяет хранить одинаковые элементы.*/
@@ -31,7 +32,6 @@ public class Lesson20HomeWork {
     }
 
 
-
     //решение через стримы
     public static ArrayList<String[]> abc1 (String ...s) {
         ArrayList<String[]> list = new ArrayList<>();
@@ -45,6 +45,6 @@ public class Lesson20HomeWork {
 
 
     public static void main(String[] args) {
-        abc2("b", "c", "d", "a", "a", "d");
+        abc1("b", "c", "d", "a", "a", "d");
     }
 }

@@ -86,7 +86,7 @@ class Test19 {
         String[] s1 = new String[]{"asdasda", "asdasdad", "asdasdsssss", " sadasdfsdfgg"};
         String[] s2 = new String[]{"asdasda", "asdasdad", "asdasdsssss"};
         String[] s3 = new String[]{"Test3"};
-        String[] s4 = new String[]{"Test4"};
+        String[] s4 = new String[]{"Human"};
         //res.abc(s1, s2);
         //res.defg(s1, s4);
         res.makeNArr(s1,s2);

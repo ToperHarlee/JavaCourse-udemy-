@@ -17,6 +17,7 @@ public class Lesson22HwStudent {
     }
 
     public StringBuilder getName() {
+//        StringBuilder res = new StringBuilder(name); // вернуть копию переменной
         return name;
     }
 

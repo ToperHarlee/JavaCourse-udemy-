@@ -16,4 +16,11 @@ public class Y extends X {
         //x.abc(); //не может быть вызван тк в классе Y нет метода класса X
         //либо нужно указать супер
     }
+
+    public static void main(String[] args) {
+         Y a = new Y();
+         a.abc();
+         a.def();
+         a.ghi();
+    }
 }
